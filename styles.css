@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.output {
+    display: none
+}
+
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.inner-container {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
