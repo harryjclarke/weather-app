@@ -9,15 +9,16 @@
     <script src="https://kit.fontawesome.com/769e220a56.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
-<body>
+<body onload="defaultLocation()">
+    <div class="section" id="background">
     <div class="d-flex justify-content-center align-items-center my-auto vh-100">
-        <div class="border border-warning p-2 rounded border-2 shadow-sm">
+        <div class="border border-warning p-2 rounded border-2 shadow-sm opacity-100 bg-light">
             <div class="h4 text-center mb-2">Simple Weather App</div>
     <form id ='getWeather'>
         <!-- <label for="city" class="form-label"></label><br> -->
         <div class="input-group">
         <input class='form-control' type="text" id="city" name="city" required placeholder="New York">
-        <input type="submit" value="Submit" class="btn btn-warning">
+        <input type="submit" value="Submit" class="btn btn-warning" id="submit">
         </div>
       </form>
       <div id="error"></div>
@@ -32,6 +33,7 @@
 <div class="row">
     <div class="col"><p><i class='fa-solid fa-cloud-rain me-1'></i><span id='precipitation'></span></p></div>
     <div class="col"><p><i class='fa-solid fa-wind me-1'></i><span id='wind'></span></p></div></div>
+</div>
 </div>
 </div>
 </div>

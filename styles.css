@@ -9,6 +9,10 @@
   height: 100vh;
 }
 
+#background {
+  z-index: -1000;
+}
+
 #humidity,
 #wind,
 #precipitation,

@@ -37,8 +37,22 @@ const fetchWeather = async (city) => {
   }
 };
 
+const fetchImage = async (city) => {
+  let background = document.getElementById('background')
+  const response = await fetch(`https://api.unsplash.com/search/photos?client_id=1sEKaTdZyYd1zfu-Y8ynzXa11gckBZbOD-UxE_qlCR8&query=${city}`)
+  const image = await response.json();
+  background.style.backgroundImage = `url('${image.results[0].urls.full}'`
+  background.style.backgroundSize = 'cover'
+}
+
+const defaultLocation = () => {
+  document.getElementById('city').value = 'New York';
+  document.getElementById('submit').click();
+}
+
 weatherForm.addEventListener('submit', (e) => {
   let city = document.getElementById('city').value;
   fetchWeather(city);
+  fetchImage(city)
   e.preventDefault();
 });
