@@ -1,20 +1,28 @@
-body {
-    font-family: Arial, Helvetica, sans-serif
-}
-
 .output {
-    display: none
+  display: none;
 }
 
 .outer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.inner-container {
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px;
+#humidity,
+#wind,
+#precipitation,
+#condition {
+  font-size: 8px;
+}
+
+#temp-feels {
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: -5px;
+}
+
+#time {
+  font-size: 10px;
+  font-weight: bold;
 }
